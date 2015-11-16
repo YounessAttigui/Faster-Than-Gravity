@@ -139,8 +139,9 @@ class rocket(object):
 
     def move(self):
         self.rect=self.rect.move(self.speed[0],0)
-        if self.rect.left < 1: self.rect.left = 1
-        if self.rect.right > 749: self.rect.right = 749
+        if self.rect.left < 1: self.rect.right = 749
+        if self.rect.right > 749: self.rect.left = 1
+        #c'est moins cohérent mais c'est plus jouable
 
 class affichage(object):
     def __init__(self,bottom,right,size=20):
